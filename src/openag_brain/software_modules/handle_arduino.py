@@ -10,7 +10,7 @@ code and reflashes the Arduino. There should always be exactly one instance of
 this module in the system.
 
 The module reads from a command line argument `serial_port` which is the UNIX
-path to the serial port to which the Arduino is connected (e.g. "/dev/ttyACM0")
+path to the serial port to which the Arduino is connected (e.g. "/dev/ttyUSB0")
 """
 import sys
 import time
@@ -75,7 +75,7 @@ class ArduinoHandler(object):
             rospy.loginfo("Skipping Arduino flash (should_flash is False)")
         rospy.loginfo("Starting to read from Arduino")
         self.serial_node = subprocess.Popen([
-            "rosrun", "rosserial_python", "serial_node.py", "/dev/ttyACM0"
+            "rosrun", "rosserial_python", "serial_node.py", "/dev/ttyUSB0"
         ])
 
     def stop(self):
