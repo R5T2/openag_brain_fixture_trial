@@ -402,7 +402,7 @@
         {
           "name": "serial_port",
           "type": "str",
-          "default": "/dev/ttyACM0"
+          "default": "/dev/ttyUSB0"
         }
       ],
       "parameters": {
